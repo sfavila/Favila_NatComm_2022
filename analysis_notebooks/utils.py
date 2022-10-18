@@ -4,6 +4,22 @@ from sklearn.metrics import r2_score
 import numpy as np
 import pandas as pd
 
+def default_data():
+    subjects = ['wlsubj004',
+                'wlsubj007',
+                'wlsubj023',
+                'wlsubj045',
+                'wlsubj061',
+                'wlsubj064',
+                'wlsubj065',
+                'wlsubj067',
+                'wlsubj070']
+    rois = ['V1','V2', 'V3', 'hV4', 'LO', 'V3ab']
+    tasks = ['perception', 'memory']
+
+    return subjects, rois, tasks
+
+    
 def calc_ang_distance(data, rotate_by='stim_angle_brain', exclude_eccen=True):
 
     # Calculate angular distance between pRF and stimulus
